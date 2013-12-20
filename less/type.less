@@ -1,0 +1,120 @@
+//
+// Typography
+// --------------------------------------------------
+
+@font-face {
+    font-family: 'Automafont';
+    src:    url('../font/2606CF_0_0.eot');
+    src:    url('../font/2606CF_0_0.eot?#iefix') format('embedded-opentype'),
+            url('../font/2606CF_0_0.woff') format('woff'),
+            url('../font/2606CF_0_0.ttf') format('truetype'),
+            url('../font/2606CF_0_0.svg#wf') format('svg');
+    }
+@font-face {
+  font-family: 'CynthoPro-Regular';
+  src:  url('../font/293520_0_0.eot');
+  src:  url('../font/293520_0_0.eot?#iefix') format('embedded-opentype'),
+        url('../font/293520_0_0.woff') format('woff'),
+        url('../font/293520_0_0.ttf') format('truetype');
+    }
+
+
+
+
+/*TYPOGRAPHY*/
+/*############################################################################*/
+body{
+    font-family: @baseFontFamily,  sans-serif;
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    letter-spacing:  0.08em;
+    color: lighten(@black, 10%);
+    text-rendering: optimizelegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  line-height: @baseLineHeight;
+}
+
+h1 { font-size: 40px; text-transform: uppercase; text-align: center; padding: 0 0 30px 0; color: @orange;} 
+h2 { font-size: @baseFontSize * 1.75; } 
+h3 { font-size: @baseFontSize * 1.75; width: 50%; max-width: 670px; text-align: center; margin: 0px auto; padding: 0 0 2px 0; border-bottom: 1px solid lighten(@black, 30%);} 
+h4 { font-size: @baseFontSize * 1.25; } 
+h5 { font-size: @baseFontSize; }
+h6 { font-size: 80%; width: 50%; max-width: 670px; margin: 0px auto; padding-bottom: 30px; color: @purple; text-align: center}
+
+
+
+// Body text
+// -------------------------
+
+
+a{
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: 14px base font * 85% = about 12px
+small   { font-size: 60%;  }
+
+strong  { font-weight: bold; }
+em      { font-style: italic; }
+cite    { font-style: normal; }
+
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+
+.uppercase          {text-transform: uppercase;}
+
+
+
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  padding: 0;
+  margin: 0 ;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: @baseLineHeight;
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    *display: inline; /* IE7 inline-block hack */
+    *zoom: 1;
+    padding-right: 10px;
+  }
+}

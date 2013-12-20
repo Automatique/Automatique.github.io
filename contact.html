@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" href="css/ie7.css" type="text/css"/>
+    <![endif]-->
+
+    <!-- html5 for everyone -->
+    <script type="text/javascript" src="js/html5.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav>
+        <ul class="inline text-center uppercase">
+            <li><a href="index.html">maatwerk</a></li>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li id="automatique-logo">
+                <a href="index.html">
+                    <span class="logo-automatique1"></span>
+                    <span class="logo-automatique2"></span>
+                </a>
+            </li>
+            <li><a href="team.html">team</a></li>
+            <li><a class="active" href="contact.html">contact</a></li>           
+        </ul>
+    </nav>
+
+    <section id="contact">
+        <h1>contact informatie:</h1>
+        <p>
+            TEL: <a href="tel:+31645004824">+31 (0)6  4500 4824</a> <span class="mobile-600">E-MAIL: <a href="mailto:info@automatique.nl">info@automatique.nl</a></span><br> <br>
+            Bel of mail als u graag uw nieuwe webservice concept wil bespreken of als u bent geinteresseerd in een inschatting voor uw nieuwe project. 
+            
+        </p>
+        <p>
+            Automatique is gevestigd in het gezellige coworking kantoor <a href="http://www.nomadz.nl" target="_blank">Nomadz</a> in creatief bedrijfs verzamelgebouw Bink36  te Den Haag. Op loopafstand van Den Haag Centraal Station en Holland  Spoor en met gratis parkeer gelegenheid dus komt u gerust een keer langs  om nader kennis te maken.
+        </p>
+
+
+        <h1>Adres:</h1>
+        <ul class="inline text-center">
+            <li class="map">
+                <div id='map_canvas'></div>
+            </li>
+            <li>
+                <p class="text-left">
+                    Binckhorstlaan 36 <br>
+                    Kantoor C348 <br>
+                    2516 BE, Den Haag <br>
+                    The Netherlands <br>
+                    <br>
+                    Plan een route naar ons kantoor met: <br>
+                    <a target="_blank" href="https://maps.google.com/maps?f=d&hl=en&geocode=%3BCSbB3pcmtKnBFQiUGgMdLBxCACmvzlC0HLfFRzFEbd5O4kAfmQ&q=Binckhorstlaan+36,+2516+Den+Haag,+Den+Haag+(Zuid-Holland)&sll=52.079125,4.325255&sspn=0.007068,0.018818&ie=UTF8&s=AARTsJofrah6XyD27yoHKx1QNKdzeRrJ2Q&hq=&hnear=Binckhorstlaan+36,+2516+BE+Laak,+Den+Haag,+Zuid-Holland,+The+Netherlands&t=m&z=14&vpsrc=0&iwloc=A&daddr=Binckhorstlaan+36,+Binckhorst,+2516+BE+Den+Haag,+The+Netherlands+(Zuid-Holland)">Google.com</a> of 
+                    <a target="_blank" href="http://9292.nl/plan/vertrek/2013-12-02T1640?naarRef=den-haag_binckhorstlaan-36">9292.nl</a>
+                </p>
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&.js"></script>
+        <script type="text/javascript">
+     var settingsItemsMap = {
+    zoom: 16,
+    center: new google.maps.LatLng(52.073880,4.332520),
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL
+    },
+    styles:[
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "visibility": "simplified" }
+    ]
+  },{
+    "featureType": "landscape",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#eaeaea" }
+    ]
+  },{
+    "featureType": "road",
+    "stylers": [
+      { "visibility": "on" },
+      { "saturation": 56 },
+      { "hue": "#ef4e3e" },
+      { "gamma": 0.84 },
+      { "weight": 0.8 },
+      { "lightness": -1 }
+    ]
+  },{
+    "featureType": "transit.station.rail",
+    "stylers": [
+      { "visibility": "simplified" }
+    ]
+  }
+],
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    
+    var map = new google.maps.Map(document.getElementById('map_canvas'), settingsItemsMap );
+
+        var icon = { 
+            url: 'img/black-logo-map.svg'
+        };
+
+    var myMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(52.073480,4.332520),
+        draggable: false,
+        icon: icon
+    });
+
+
+
+   
+
+   
+    myMarker.setMap(map);
+
+
+    
+
+
+    </script>
+  
+</body>
+</html>
