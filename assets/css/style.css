@@ -457,12 +457,11 @@ table {
 html,
 body {
   color: #3e143a;
-  font-family: 'Nixie One', cursive;
-  font-size: 1.3em;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1.05em;
   height: 100%;
-  line-height: 1.2em;
-  letter-spacing: 0.03em;
-  word-spacing: 0.1em;
+  letter-spacing: 0.05em;
+  word-spacing: -0.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -509,6 +508,10 @@ a:hover {
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+h1 {
+  font-size: 1.4em;
+  padding-bottom: 1.2em;
+}
 p {
   padding-bottom: 1em;
 }
@@ -520,11 +523,8 @@ h5 {
 .accent {
   background-color: #ef4e3e;
 }
-.wrapper {
-  min-height: 100%;
-}
 #logo {
-  width: 45%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,7 +534,7 @@ h5 {
   border-radius: 0px 100px 100px 0;
 }
 #logo a {
-  width: 45%;
+  width: 40%;
 }
 #logo a svg {
   width: 100%;
@@ -545,7 +545,7 @@ h5 {
 #point {
   width: 50px;
   height: 100px;
-  left: 45%;
+  left: 40%;
   top: 50%;
   margin: -50px 0 0 0;
   position: fixed;
@@ -575,14 +575,14 @@ h5 {
   margin: 0px 0 0 -24px;
 }
 #about {
-  min-height: 100%;
-  max-width: 575px;
+  min-height: 100vh;
+  max-width: 500px;
   position: absolute;
-  left: 46%;
+  left: 42%;
   display: flex;
   align-items: center;
   padding: 10px 60px 0;
-  top: 10%;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
   html,
@@ -591,7 +591,7 @@ h5 {
   }
   [class^="icon-"],
   [class*=" icon-"] {
-    font-size: 1.8em;
+    font-size: 1.4em;
     line-height: 2em;
     letter-spacing: 1.5em;
   }
@@ -631,7 +631,7 @@ h5 {
     max-width: 575px;
     position: absolute;
     left: auto;
-    top: 13%;
+    top: 25%;
     padding: 0 20px;
   }
 }
